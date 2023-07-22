@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> My Weather App</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./src/styles.css">
+  <script src="./src/script.js" defer></script>
+</head>
+
+<body>
+
+  <div class="card">
+    <div class="search">
+      <input type="text" class="search-bar" placeholder="Search">
+      <button>
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
+          viewBox="0 0 16 16">
+          <path
+            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+        </svg>
+      </button>
+    </div>
+    <div class="weather loading">
+      <h2 class="city">Weather in Ratlam</h2>
+      <h1 class="temp">25.02°C</h1>
+      <div class="flex">
+        <img src="https://openweathermap.org/img/wn/04n.png" alt="" class="icon" />
+        <div class="description">Cloudy</div>
+      </div>
+      <div class="humidity">Humidity: 91%</div>
+      <div class="wind">Wind speed: 63.05 km/h</div>
+    </div>
+    <a target="_blank" rel="noopener noreferrer"
+      href="https://github.com/sureshkhiyani/Weather-Web-Application.github.io">
+      <img alt="github" src="./images/logogit.png" width="70" height="70"></a>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+  <script>
+    VanillaTilt.init(document.querySelectorAll(".card"), {
+      max: 4,
+      speed: 800,
+      scale: 1.03,
+      glare: true,
+      "max-glare": 0.5,
+    });
+  </script>
+</body>
+
+</html>
